@@ -1,0 +1,648 @@
+/* variables */
+
+@font-face {
+    font-family: 'ft88-reg';
+    src: url('./fonts/FT88-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'ft88-bold';
+    src: url('./fonts/FT88-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'ft88-goth';
+    src: url('./fonts/FT88-Gothique.ttf');
+}
+
+@font-face {
+    font-family: 'slkscr';
+    src: url('./fonts/slkscr.ttf');
+}
+
+@font-face {
+    font-family: 'slkscrb';
+    src: url('./fonts/slkscrb.ttf');
+}
+
+:root {
+    --riotred: #D22C37;
+    --riotwhite: #FAFAFD;
+    --riotgray: #1F1F1F;
+}
+
+/* css */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: var(--riotgray);
+}
+
+.logodiv {
+    display: inline;
+}
+
+.logo {
+    margin-top: 30px;
+    margin-left: 30px;
+    vertical-align: middle;
+    width: 45px;
+}
+
+.dropbtn {
+    background-color: #FAFAFD10;
+    border-radius: 50px;
+    height: 50px;
+    width: 140px;
+    color: var(--riotwhite);
+    padding: 16px;
+    font-family: 'ft88-bold', monospace;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn-clicked {
+    background-color: var(--riotred);
+    border-radius: 50px;
+    height: 50px;
+    width: 140px;
+    color: var(--riotwhite);
+    padding: 16px;
+    font-family: 'ft88-bold', monospace;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    float: right;
+    top: 30px;
+    right: 30px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropcnt {
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: var(--riotred);
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0px;
+    z-index: 3;
+}
+
+/* Links inside the dropdown */
+.dropcnt a {
+    color: var(--riotwhite);
+    font-family: 'ft88-bold', monospace;
+    font-size: 16px;
+    padding: 20px 20px;
+    text-decoration: none;
+    display: block;
+}
+  
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display:block;
+}
+
+.droparrow {
+    width: 12px;
+    padding-bottom: 2px;
+}
+
+.titlebanner {
+    display: block;
+    width: 100%;
+    height: 655px;
+}
+
+.soulfighter{
+    display: block;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+.sf-anim {
+    animation: sf 1500ms steps(60) infinite;
+}
+
+@keyframes sf {
+    0%  {
+        width: 200px;
+    }
+    50% {
+        width: 220px;
+    }
+    100% {
+        width: 200px;
+    }
+}
+
+.banner{
+    display: block;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 200px;
+}
+
+.wrw{
+    display: block;
+    background-color: var(--riotred);
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+
+.wrw-arrow{
+    display: block;
+    padding-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20px;
+}
+
+.wrw-textwrap {
+    margin: 70px auto;
+    width: 160px;
+}
+
+/* wrw text animation */
+
+.anim-typewriter {
+    animation: typewriter 3s steps(11) infinite, 
+            blinkTextCursor 1000ms steps(2) infinite normal;
+}
+
+@keyframes typewriter {
+    0%  {
+        width: 0;
+    }
+    50% {
+        width: 160px;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
+
+/* css */
+
+.wrw-text {
+    color: var(--riotwhite);
+    font-family: 'ft88-bold', monospace;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    border-right: .15em solid var(--riotwhite);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.bodycontent {
+    padding: 0;
+    margin: 0;
+    background-color: var(--riotwhite);
+    width: 100%;
+}
+
+.heading{
+    padding-top: 120px;
+    display: block;
+}
+
+.heading-blk {
+    color: var(--riotgray);
+    font-family: 'ft88-goth', serif;
+    font-size: 40px;
+    padding-left: 35px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    z-index: 2;
+}
+
+.heading-wht {
+    color: var(--riotwhite);
+    position: relative;
+    font-family: 'ft88-goth', serif;
+    font-size: 40px;
+    padding-top: 15px;
+    padding-left: 10px;
+    z-index: 2;
+    margin-bottom: 0;
+}
+
+.hl-1 {
+    background-color: var(--riotred);
+    position: relative;    
+    padding-left: 5px;
+    height: 65px;
+    width: 220px;
+    bottom: 35px;
+    left: 20px;
+    z-index: 0;
+}
+
+.ptone-sticker {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    width: 60px;
+    top: 1250px;
+    right: 30px;
+}
+
+.linecontainer {
+    display: flex;
+}
+
+.bullet-text {
+    display: inline-block;
+    position: relative;
+    margin: 15px 0px 0px 20px;
+    vertical-align: middle;
+    line-height: 25px;
+    text-align: left;
+    letter-spacing: -1px;
+    color: var(--riotgray);
+    font-family: 'ft88-bold', serif;
+    font-size: 18px;
+}
+
+.bullet-grey {
+    display: inline-block;
+    position: relative;
+    background-color: #cccccc;
+    height: 60px;
+    width: 10px;
+    margin-left: 30px;
+    margin-right: 0px;
+}
+
+.ptone-redbullet {
+    display: inline-block;
+    position: relative;
+    background-color: var(--riotred);
+    height: 80px;
+    width: 10px;
+    margin-left: 30px;
+    margin-right: 0px;
+}
+
+.ptone-img {
+    display: block;
+    position: absolute;
+    width: 330px;
+    border: 5px solid;
+    border-radius: 8px;
+    border-color: #cccccc;
+    left: 25px;
+    align-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.sf-div {
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 80px;
+}
+
+.ptone-sf {
+    display: block;
+    position: relative;
+    width: 180px;
+    top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 3;
+}
+
+.ptone-lol {
+    display: inline-flex;
+    position: relative;
+    width: 60px;
+    top: 60px;
+    left: 40px;
+    z-index: 3;
+}
+
+.ptone-seemore {
+    display: inline-flex;
+    position: relative;
+    height: 30px;
+    width: 90px;
+    top: 55px;
+    right: 40px;
+    float: right;
+    z-index: 3;
+    background-color: #F1F5F125;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.seemore {
+    font-family: 'ft88-bold', monospace;
+    font-size: 10px;
+    color: var(--riotwhite);
+    margin: auto;
+    text-decoration: none;
+}
+
+.pttwo-sticker {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    width: 40px;
+    top: 1900px;
+    right: 30px;
+    overflow: hidden;
+}
+
+.pttwo-sticker1 {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    width: 60px;
+    top: 1900px;
+    right: 90px;
+}
+
+.pttwo-sticker2 {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    width: 50px;
+    top: 1960px;
+    right: 30px;
+}
+
+.heading2{
+    padding-top: 220px;
+    display: block;
+}
+
+.hl-2 {
+    background-color: var(--riotred);
+    position: relative;    
+    padding-left: 5px;
+    height: 65px;
+    width: 195px;
+    bottom: 35px;
+    left: 20px;
+    z-index: 0;
+}
+
+.akali-div {
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 450px;
+}
+
+.pttwo-img {
+    display: block;
+    position: absolute;
+    width: 330px;
+    border: 5px solid;
+    border-radius: 8px;
+    border-color: #cccccc;
+    left: 25px;
+    align-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.pttwo-lol {
+    display: inline-flex;
+    position: relative;
+    width: 60px;
+    top: 365px;
+    left: 40px;
+    z-index: 3;
+}
+
+.dai-div {
+    display: block;
+    position: relative;
+    margin: 10px auto 80px auto;
+    width: 100%;
+}
+
+.lottie{
+    display: block;
+    position: absolute;
+    height: 380px;
+    width: 380px;
+    margin: auto;
+}
+
+.dai {
+    display: flex;
+    position: relative;
+    margin: auto;
+    flex-direction: row;
+    justify-content: center;
+    top: 120px;
+    
+    color: var(--riotgray);
+    font-family: 'ft88-goth', serif;
+    font-size: 40px;
+    text-align: center;
+    line-height: 50px;
+    z-index: 2;
+}
+
+.ptt-tl {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    width: 40px;
+    top: 2900px;
+    left: 30px;
+    overflow: hidden;
+}
+
+.ptt-tr {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    width: 30px;
+    top: 2905px;
+    right: 30px;
+}
+
+.ptt-bl {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    width: 30px;
+    top: 3205px;
+    left: 30px;
+}
+
+.ptt-br {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    width: 40px;
+    top: 3200px;
+    right: 30px;
+    overflow: hidden;
+}
+
+.divider {
+    display: block;
+    width: 280px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.dai-textbox {
+    display: inline-block;
+    position: relative;
+    background-color: #f2f2f2;
+    border-radius: 25px;
+    height: 480px;
+    width: 280px;
+    left: 10px;
+}
+
+.dai-text {
+    position: relative;
+    margin: 30px 0px 20px 10px;
+    width: 220px;
+    left: 20px;
+    text-align: justify;
+    letter-spacing: -1px;
+    font-family: 'ft88-reg', sans-serif;
+    font-size: 18px;
+    line-height: 45px;
+}
+
+.dai-sticker {
+    position: relative;
+    width: 60px;
+    float: right;
+    right: 30px;
+    bottom: 20px;
+}
+
+.dai-img {
+    position: relative;
+    height: 480px;
+    float: right;
+    overflow: hidden;
+}
+
+.divider-blk {
+    display: block;
+    width: 280px;
+    margin: auto;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.worlds {
+    display: block;
+    margin: 80px auto 80px auto;
+    border-radius: 5px;
+}
+
+.footer {
+    display: block;
+    position: relative;
+    margin: 30px auto 90px auto;
+    width: 330px;
+}
+
+.apply {
+    font-family: 'slkscrb', monospace;
+    text-align: center;
+    font-size: 60px;
+    color: var(--riotred);
+    margin-bottom: 10px;
+}
+
+.cta {
+    font-family: 'slkscr', monospace;
+    text-align: center;
+    font-size: 40px;
+    color: var(--riotwhite);
+
+    width: 280px;
+    margin: 0 auto 0 auto;
+}
+
+.contactus {
+    font-family: 'slkscrb', monospace;
+    text-align: center;
+    font-size: 30px;
+    color: var(--riotwhite);
+    margin: 80px auto auto auto;
+}
+
+.email2 {
+    display: flex;
+    box-sizing: border-box;
+    margin: 80px auto 20px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 60px;
+    width: 320px;
+    border-radius: 35px;
+    outline: none;
+
+    font-family: 'ft88-reg', monospace;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sendbutton {
+    display: flex;
+    width: 80px;
+    margin: 0px auto 120px auto;
+}
+
+.footerlogo{
+    width: 50px;
+    margin: 0px 0px 30px 30px;
+}
+
+.footerflex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 0px 60px 30px;
+}
+
+.footerlink {
+    padding-right: 30px;
+    padding-bottom: 20px;
+
+    font-family: 'ft88-bold', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #FAFAFD70;
+}
